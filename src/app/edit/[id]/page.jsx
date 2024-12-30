@@ -16,7 +16,7 @@ const EditPostPage = ({params}) => {
 
     const getPostById = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/posts/${id}`,{
+            const res = await fetch(`/api/posts/${id}`,{
                 method: 'GET',
                 cache: 'no-store',
             });
@@ -35,7 +35,7 @@ const EditPostPage = ({params}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+            const res = await fetch(`/api/posts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ export default function Home() {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/posts");
+      const res = await fetch("/api/posts");
       const data = await res.json();
       setPostData(data);
     } catch (error) {
@@ -21,7 +21,7 @@ export default function Home() {
 
   const deletePost = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+      const res = await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
       });
       if (!res.ok) {
